@@ -18,20 +18,17 @@ void printNumbersFor(int n) {
 }
 
 void printNumbersRecursiveFunction(int n) {
-    if (n < 0) {
-        return;
+    if (n > 0) {
+      printNumbersRecursiveFunction(n-1);
     }
-    printNumbersRecursiveFunction(n-1);
     printf("%i ", n);
 }
 
 void printReverseNumbersRecursiveFunction(int n) {
     printf("%i ", n);
-    if (n <= 0) {
-        return;
+    if (n > 0) {
+      printReverseNumbersRecursiveFunction(n-1);
     }
-    printReverseNumbersRecursiveFunction(n-1);
-
 }
 
 int main() {
