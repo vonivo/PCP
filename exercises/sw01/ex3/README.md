@@ -11,4 +11,4 @@ myStack.push(...);
 mayStack = new Stack();
 ```
 Wird die Referenz auf welche `myStack` Zeigt fallengelassen und auf durch die neue Referenz von `new Stack()` ersetzt. Die alte Referenz ist dann qualifiziert für die Garbage-Collection und wird dann irgendwann mal aufgeräumt. 
-Wenn man nun einen `myStack.clear()`-Methode hat, könnte man die Referenz wiederverwenden.
+Wenn man nun einen `myStack.clear()`-Methode hat, könnte man die Referenz wiederverwenden und auch an anderen Orten referenzieren.
