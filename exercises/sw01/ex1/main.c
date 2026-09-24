@@ -2,13 +2,13 @@
 
 void printNumbersGoto(int n) {
     int i = 0;
-    startLoop:
-        printf("%i ", i);
-        i++;
+startLoop:
+    printf("%i ", i);
+    i++;
 
-        if (i <= n) {
-            goto startLoop;
-        }
+    if (i <= n) {
+        goto startLoop;
+    }
 }
 
 void printNumbersFor(int n) {
@@ -19,7 +19,7 @@ void printNumbersFor(int n) {
 
 void printNumbersRecursiveFunction(int n) {
     if (n > 0) {
-      printNumbersRecursiveFunction(n-1);
+        printNumbersRecursiveFunction(n - 1);
     }
     printf("%i ", n);
 }
@@ -27,7 +27,7 @@ void printNumbersRecursiveFunction(int n) {
 void printReverseNumbersRecursiveFunction(int n) {
     printf("%i ", n);
     if (n > 0) {
-      printReverseNumbersRecursiveFunction(n-1);
+        printReverseNumbersRecursiveFunction(n - 1);
     }
 }
 
