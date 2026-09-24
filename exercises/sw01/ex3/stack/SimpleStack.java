@@ -16,7 +16,7 @@ public class SimpleStack implements Stack {
 
     @Override
     public boolean pop() {
-        if (currentElement == null) {
+        if (isEmpty()) {
             return false;
         }
         currentElement = currentElement.getNext();
