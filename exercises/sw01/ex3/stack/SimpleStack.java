@@ -5,12 +5,8 @@ public class SimpleStack implements Stack {
 
     @Override
     public void push(Element e) {
-        if (currentElement == null) {
-            currentElement = e;
-        } else {
-            e.setNext(currentElement);
-            currentElement = e;
-        }
+        e.setNext(currentElement);
+        currentElement = e;
     }
 
     @Override
