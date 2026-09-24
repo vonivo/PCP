@@ -11,7 +11,7 @@
 /*
  *
  */
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
     stack myStack = init();
     printf("size(myStack) = %i\n", size(myStack));
     printf("isEmpty(myStack) = %i\n", isEmpty(myStack));
