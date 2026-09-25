@@ -25,7 +25,7 @@ public class SimpleStack implements Stack {
 
     @Override
     public void print() {
-        if (currentElement == null) {
+        if (isEmpty()) {
             System.out.println("print - Stack is empty");
             return;
         }

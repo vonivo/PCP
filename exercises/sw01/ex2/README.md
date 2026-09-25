@@ -9,4 +9,4 @@ Nein, das macht keinen Sinn. Der Code würde dann etwa so aussehen:
 mystack = clear(mystack)
 ```
 
-Mit dem Zuweisungsopertar `=` wird der Speicherplatz, welcher `mystack` besitzt einfach *überschrieben* mit dem Return-Wert von `clear(myStack)`. Sprich `mystack = init(stack)` hätte genau denselben Effekt.
+Mit dem Zuweisungsopertar `=` wird der Speicherplatz, welcher `mystack` besitzt einfach *überschrieben* mit dem Return-Wert von `clear(myStack)`. Sprich `mystack = init(stack)` hätte genau denselben Effekt, zusätzlich kann an keinem anderen Ort eine Referenz darauf gehalten werden, welche aktualisiert werden könnte da es call by value ist.
