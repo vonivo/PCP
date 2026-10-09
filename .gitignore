@@ -173,3 +173,5 @@ replay_pid*
 
 
 *.iml
+
+!exercises/sw04/ex4/pcp-problem-provider25.jar

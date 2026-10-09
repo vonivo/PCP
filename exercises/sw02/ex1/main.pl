@@ -42,6 +42,8 @@ sibling(X, Y) :- father(Father, X), father(Father, Y),
 % ---------------- C)---------------------------
 grandmother(Grandmother, Grandchild) :- mother(Grandmother, Parent), parent(Parent, Grandchild).       % r3
 
+grandfather(Grandfather, Grandchild) :- father(Grandfather, Parent), parent(Parent, Grandchild).       % r3
+
 % grandmother(X, jim) --> X=marry;X=liz.
 
 % ---------------- C)---------------------------
