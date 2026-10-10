@@ -47,5 +47,3 @@ replace_0([X | Tail], [X | L]) :-
 to_boolean(Goal, true) :-
     call(Goal), !.
 to_boolean(_, false).
-
-
