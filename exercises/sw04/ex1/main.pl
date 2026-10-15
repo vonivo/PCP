@@ -12,8 +12,10 @@ fib_clp(N, F) :-
 % Das Problem manifestiert sich in einer Endlosen Rekursion.
 %---------------- b)
 % Das Problem tritt aus folgendem Grund auf. Damit Prolog beweisen kann, dass  z.B. 6 keine Fibonacci-Zahl ist,
-% muss es alle alle Fibnoacci-Zahlen berechnen und dann überprüfen ob 6 keine davon ist. Daher wächst auch
-% der stack ins unnednliche.
+% muss es alle Fibnoacci-Zahlen berechnen um zu überprüfen ob 6 keine davon ist. Daher wächst auch
+% der stack ins unnednliche. Als Mensch wissen wir das N und F streng monoton steigen und dadruch
+% sehen wir, dass (bei z.B N=?, F=6) F keine Fibonacci Zahl ist, wenn wir ein N_x finden welches F_x > F ist und bisher
+% nichts gefunden haben dass F keine Fibonacci Zahl ist.
 
 fib_clp_fixed(N, F) :-
     { N >= 0, F >= 0 },

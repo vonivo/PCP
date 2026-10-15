@@ -23,9 +23,12 @@ solve(sudoku, ID, BaeUrl, Reply) :-
 % ----------------------- Relationship ---------------------------
 solve(relationship, ID, BaseUrl, Reply) :-
     parse(relationship, Reply, RelationShip, Person1, Person2),
-    Goal =.. [RelationShip, Person1, Person2],
-    to_boolean(Goal, Result),
-    http_post(BaseUrl, json(json([id=ID,solution=Result])), _, []).
+    call(RelationShip, Person1, Person2),
+    http_post(BaseUrl, json(json([id=ID,solution=true])), _, []),
+    !.
+
+solve(relationship, ID, BaseUrl, _) :-
+    http_post(BaseUrl, json(json([id=ID,solution=false])), _, []).
 
 
 parse(relationship, JSON, RelationShip, Person1, Person2) :-
@@ -43,7 +46,3 @@ replace_0([0 | Tail], [_ | L]) :-
     replace_0(Tail, L).
 replace_0([X | Tail], [X | L]) :-
     replace_0(Tail, L).
-
-to_boolean(Goal, true) :-
-    call(Goal), !.
-to_boolean(_, false).
